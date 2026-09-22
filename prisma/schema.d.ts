@@ -34,7 +34,7 @@ import type {
 } from '@prisma/orm-postgres/contract/types';
 
 export type StorageHash =
-  StorageHashBase<'e513a13bd0a7cef3da660f13f1453390dad7104f797998d94a7bf8375ebce9b3'>;
+  StorageHashBase<'e61129742b9f64e853430649e53ef9b7729f78b792422ca52700342e0a7a8631'>;
 export type ExecutionHash =
   ExecutionHashBase<'f4cac9077cb75280aec06e92ce67e9beb462af286f682b1732f984a01d46c967'>;
 export type ProfileHash =
@@ -288,9 +288,12 @@ export type FieldOutputTypes = {
       readonly company: CodecTypes['pg/text@1']['output'] | null;
       readonly email: CodecTypes['pg/text@1']['output'] | null;
       readonly phone: CodecTypes['pg/text@1']['output'] | null;
-      readonly city: CodecTypes['pg/text@1']['output'] | null;
-      readonly projectType: CodecTypes['pg/text@1']['output'] | null;
-      readonly projectStage: CodecTypes['pg/text@1']['output'] | null;
+      readonly facilityType: CodecTypes['pg/text@1']['output'] | null;
+      readonly flooringArea: CodecTypes['pg/text@1']['output'] | null;
+      readonly projectRequirement: CodecTypes['pg/text@1']['output'] | null;
+      readonly projectStartTimeline: CodecTypes['pg/text@1']['output'] | null;
+      readonly projectRole: CodecTypes['pg/text@1']['output'] | null;
+      readonly projectCity: CodecTypes['pg/text@1']['output'] | null;
       readonly message: CodecTypes['pg/text@1']['output'] | null;
       readonly source: 'WEBSITE' | 'PRODUCT' | 'CONTACT' | 'AR';
       readonly status:
@@ -404,9 +407,12 @@ export type FieldInputTypes = {
       readonly company: CodecTypes['pg/text@1']['input'] | null;
       readonly email: CodecTypes['pg/text@1']['input'] | null;
       readonly phone: CodecTypes['pg/text@1']['input'] | null;
-      readonly city: CodecTypes['pg/text@1']['input'] | null;
-      readonly projectType: CodecTypes['pg/text@1']['input'] | null;
-      readonly projectStage: CodecTypes['pg/text@1']['input'] | null;
+      readonly facilityType: CodecTypes['pg/text@1']['input'] | null;
+      readonly flooringArea: CodecTypes['pg/text@1']['input'] | null;
+      readonly projectRequirement: CodecTypes['pg/text@1']['input'] | null;
+      readonly projectStartTimeline: CodecTypes['pg/text@1']['input'] | null;
+      readonly projectRole: CodecTypes['pg/text@1']['input'] | null;
+      readonly projectCity: CodecTypes['pg/text@1']['input'] | null;
       readonly message: CodecTypes['pg/text@1']['input'] | null;
       readonly source: 'WEBSITE' | 'PRODUCT' | 'CONTACT' | 'AR';
       readonly status:
@@ -515,16 +521,19 @@ export type StorageColumnTypes = {
       readonly updatedAt: CodecTypes['pg/timestamptz-string@1']['output'];
     };
     readonly enquiry: {
-      readonly city: CodecTypes['pg/text@1']['output'] | null;
       readonly company: CodecTypes['pg/text@1']['output'] | null;
       readonly createdAt: CodecTypes['pg/timestamptz-string@1']['output'];
       readonly email: CodecTypes['pg/text@1']['output'] | null;
+      readonly facilityType: CodecTypes['pg/text@1']['output'] | null;
+      readonly flooringArea: CodecTypes['pg/text@1']['output'] | null;
       readonly id: CodecTypes['pg/int4@1']['output'];
       readonly message: CodecTypes['pg/text@1']['output'] | null;
       readonly name: CodecTypes['pg/text@1']['output'];
       readonly phone: CodecTypes['pg/text@1']['output'] | null;
-      readonly projectStage: CodecTypes['pg/text@1']['output'] | null;
-      readonly projectType: CodecTypes['pg/text@1']['output'] | null;
+      readonly projectCity: CodecTypes['pg/text@1']['output'] | null;
+      readonly projectRequirement: CodecTypes['pg/text@1']['output'] | null;
+      readonly projectRole: CodecTypes['pg/text@1']['output'] | null;
+      readonly projectStartTimeline: CodecTypes['pg/text@1']['output'] | null;
       readonly source: 'WEBSITE' | 'PRODUCT' | 'CONTACT' | 'AR';
       readonly status:
         | 'NEW'
@@ -631,16 +640,19 @@ export type StorageColumnInputTypes = {
       readonly updatedAt: CodecTypes['pg/timestamptz-string@1']['input'];
     };
     readonly enquiry: {
-      readonly city: CodecTypes['pg/text@1']['input'] | null;
       readonly company: CodecTypes['pg/text@1']['input'] | null;
       readonly createdAt: CodecTypes['pg/timestamptz-string@1']['input'];
       readonly email: CodecTypes['pg/text@1']['input'] | null;
+      readonly facilityType: CodecTypes['pg/text@1']['input'] | null;
+      readonly flooringArea: CodecTypes['pg/text@1']['input'] | null;
       readonly id: CodecTypes['pg/int4@1']['input'];
       readonly message: CodecTypes['pg/text@1']['input'] | null;
       readonly name: CodecTypes['pg/text@1']['input'];
       readonly phone: CodecTypes['pg/text@1']['input'] | null;
-      readonly projectStage: CodecTypes['pg/text@1']['input'] | null;
-      readonly projectType: CodecTypes['pg/text@1']['input'] | null;
+      readonly projectCity: CodecTypes['pg/text@1']['input'] | null;
+      readonly projectRequirement: CodecTypes['pg/text@1']['input'] | null;
+      readonly projectRole: CodecTypes['pg/text@1']['input'] | null;
+      readonly projectStartTimeline: CodecTypes['pg/text@1']['input'] | null;
       readonly source: 'WEBSITE' | 'PRODUCT' | 'CONTACT' | 'AR';
       readonly status:
         | 'NEW'
@@ -786,9 +798,12 @@ export namespace Models {
     company: CodecTypes['pg/text@1']['output'] | null;
     email: CodecTypes['pg/text@1']['output'] | null;
     phone: CodecTypes['pg/text@1']['output'] | null;
-    city: CodecTypes['pg/text@1']['output'] | null;
-    projectType: CodecTypes['pg/text@1']['output'] | null;
-    projectStage: CodecTypes['pg/text@1']['output'] | null;
+    facilityType: CodecTypes['pg/text@1']['output'] | null;
+    flooringArea: CodecTypes['pg/text@1']['output'] | null;
+    projectRequirement: CodecTypes['pg/text@1']['output'] | null;
+    projectStartTimeline: CodecTypes['pg/text@1']['output'] | null;
+    projectRole: CodecTypes['pg/text@1']['output'] | null;
+    projectCity: CodecTypes['pg/text@1']['output'] | null;
     message: CodecTypes['pg/text@1']['output'] | null;
     source: 'WEBSITE' | 'PRODUCT' | 'CONTACT' | 'AR';
     status:
@@ -1164,17 +1179,32 @@ type ContractBase = Omit<
                   readonly codecId: 'pg/text@1';
                   readonly nullable: true;
                 };
-                readonly city: {
+                readonly facilityType: {
                   readonly nativeType: 'text';
                   readonly codecId: 'pg/text@1';
                   readonly nullable: true;
                 };
-                readonly projectType: {
+                readonly flooringArea: {
                   readonly nativeType: 'text';
                   readonly codecId: 'pg/text@1';
                   readonly nullable: true;
                 };
-                readonly projectStage: {
+                readonly projectRequirement: {
+                  readonly nativeType: 'text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: true;
+                };
+                readonly projectStartTimeline: {
+                  readonly nativeType: 'text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: true;
+                };
+                readonly projectRole: {
+                  readonly nativeType: 'text';
+                  readonly codecId: 'pg/text@1';
+                  readonly nullable: true;
+                };
+                readonly projectCity: {
                   readonly nativeType: 'text';
                   readonly codecId: 'pg/text@1';
                   readonly nullable: true;
@@ -1921,15 +1951,27 @@ type ContractBase = Omit<
                 readonly nullable: true;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
               };
-              readonly city: {
+              readonly facilityType: {
                 readonly nullable: true;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
               };
-              readonly projectType: {
+              readonly flooringArea: {
                 readonly nullable: true;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
               };
-              readonly projectStage: {
+              readonly projectRequirement: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly projectStartTimeline: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly projectRole: {
+                readonly nullable: true;
+                readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
+              };
+              readonly projectCity: {
                 readonly nullable: true;
                 readonly type: { readonly kind: 'scalar'; readonly codecId: 'pg/text@1' };
               };
@@ -1982,9 +2024,12 @@ type ContractBase = Omit<
                 readonly company: { readonly column: 'company' };
                 readonly email: { readonly column: 'email' };
                 readonly phone: { readonly column: 'phone' };
-                readonly city: { readonly column: 'city' };
-                readonly projectType: { readonly column: 'projectType' };
-                readonly projectStage: { readonly column: 'projectStage' };
+                readonly facilityType: { readonly column: 'facilityType' };
+                readonly flooringArea: { readonly column: 'flooringArea' };
+                readonly projectRequirement: { readonly column: 'projectRequirement' };
+                readonly projectStartTimeline: { readonly column: 'projectStartTimeline' };
+                readonly projectRole: { readonly column: 'projectRole' };
+                readonly projectCity: { readonly column: 'projectCity' };
                 readonly message: { readonly column: 'message' };
                 readonly source: { readonly column: 'source' };
                 readonly status: { readonly column: 'status' };

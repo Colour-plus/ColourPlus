@@ -527,13 +527,6 @@
           },
           "Enquiry": {
             "fields": {
-              "city": {
-                "nullable": true,
-                "type": {
-                  "codecId": "pg/text@1",
-                  "kind": "scalar"
-                }
-              },
               "company": {
                 "nullable": true,
                 "type": {
@@ -549,6 +542,20 @@
                 }
               },
               "email": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "facilityType": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "flooringArea": {
                 "nullable": true,
                 "type": {
                   "codecId": "pg/text@1",
@@ -583,14 +590,28 @@
                   "kind": "scalar"
                 }
               },
-              "projectStage": {
+              "projectCity": {
                 "nullable": true,
                 "type": {
                   "codecId": "pg/text@1",
                   "kind": "scalar"
                 }
               },
-              "projectType": {
+              "projectRequirement": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "projectRole": {
+                "nullable": true,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "projectStartTimeline": {
                 "nullable": true,
                 "type": {
                   "codecId": "pg/text@1",
@@ -650,9 +671,6 @@
             },
             "storage": {
               "fields": {
-                "city": {
-                  "column": "city"
-                },
                 "company": {
                   "column": "company"
                 },
@@ -661,6 +679,12 @@
                 },
                 "email": {
                   "column": "email"
+                },
+                "facilityType": {
+                  "column": "facilityType"
+                },
+                "flooringArea": {
+                  "column": "flooringArea"
                 },
                 "id": {
                   "column": "id"
@@ -674,11 +698,17 @@
                 "phone": {
                   "column": "phone"
                 },
-                "projectStage": {
-                  "column": "projectStage"
+                "projectCity": {
+                  "column": "projectCity"
                 },
-                "projectType": {
-                  "column": "projectType"
+                "projectRequirement": {
+                  "column": "projectRequirement"
+                },
+                "projectRole": {
+                  "column": "projectRole"
+                },
+                "projectStartTimeline": {
+                  "column": "projectStartTimeline"
                 },
                 "source": {
                   "column": "source"
@@ -1589,11 +1619,6 @@
                 }
               ],
               "columns": {
-                "city": {
-                  "codecId": "pg/text@1",
-                  "nativeType": "text",
-                  "nullable": true
-                },
                 "company": {
                   "codecId": "pg/text@1",
                   "nativeType": "text",
@@ -1609,6 +1634,16 @@
                   "nullable": false
                 },
                 "email": {
+                  "codecId": "pg/text@1",
+                  "nativeType": "text",
+                  "nullable": true
+                },
+                "facilityType": {
+                  "codecId": "pg/text@1",
+                  "nativeType": "text",
+                  "nullable": true
+                },
+                "flooringArea": {
                   "codecId": "pg/text@1",
                   "nativeType": "text",
                   "nullable": true
@@ -1637,12 +1672,22 @@
                   "nativeType": "text",
                   "nullable": true
                 },
-                "projectStage": {
+                "projectCity": {
                   "codecId": "pg/text@1",
                   "nativeType": "text",
                   "nullable": true
                 },
-                "projectType": {
+                "projectRequirement": {
+                  "codecId": "pg/text@1",
+                  "nativeType": "text",
+                  "nullable": true
+                },
+                "projectRole": {
+                  "codecId": "pg/text@1",
+                  "nativeType": "text",
+                  "nullable": true
+                },
+                "projectStartTimeline": {
                   "codecId": "pg/text@1",
                   "nativeType": "text",
                   "nullable": true
@@ -2160,7 +2205,7 @@
         "kind": "postgres-schema"
       }
     },
-    "storageHash": "e513a13bd0a7cef3da660f13f1453390dad7104f797998d94a7bf8375ebce9b3"
+    "storageHash": "e61129742b9f64e853430649e53ef9b7729f78b792422ca52700342e0a7a8631"
   },
   "execution": {
     "executionHash": "f4cac9077cb75280aec06e92ce67e9beb462af286f682b1732f984a01d46c967",
