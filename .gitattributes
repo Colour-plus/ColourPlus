@@ -1,0 +1,51 @@
+import { NextRequest, NextResponse } from "next/server";
+import { COOKIE_NAME, verifyAdminToken } from "@/lib/auth";
+
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  const token = request.cookies.get(COOKIE_NAME)?.value;
+
+  /*
+   * Protect Admin pages
+   */
+  if (pathname.startsWith("/admin") && pathname !== "/admin/login") {
+    if (!token || !(await verifyAdminToken(token))) {
+      const loginUrl = new URL("/admin/login", request.url);
+
+      return NextResponse.redirect(loginUrl);
+    }
+  }
+
+  /*
+   * Protect enquiry management APIs.
+   *
+   * POST /api/enquiries remains public because
+   * the website contact form needs to create enquiries.
+   *
+   * GET and PATCH are restricted to authenticated admins.
+   */
+  if (
+    pathname.startsWith("/api/enquiries") &&
+    request.method !== "POST"
+  ) {
+    if (!token || !(await verifyAdminToken(token))) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Unauthorized.",
+        },
+        { status: 401 }
+      );
+    }
+  }
+
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: [
+    "/admin/:path*",
+    "/api/enquiries/:path*",
+  ],
+};
