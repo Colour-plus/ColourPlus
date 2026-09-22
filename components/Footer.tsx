@@ -105,10 +105,6 @@ export default function Footer() {
               Protective Coatings
             </Link>
 
-            <Link href="/colour-studio">
-              Architectural Surfaces
-            </Link>
-
           </div>
 
 
@@ -129,12 +125,10 @@ export default function Footer() {
               Projects
             </Link>
 
-            <Link href="/technology">
-              Technology
-            </Link>
+            
 
-            <Link href="/colour-studio">
-              Colour Studio
+            <Link href="/privacy-policy">
+              Privacy Policy
             </Link>
 
           </div>

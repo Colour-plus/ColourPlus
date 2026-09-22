@@ -6,13 +6,13 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const primary = [
   ["01", "Home", "/"],
-  ["02", "Solutions", "/solutions"],
-  ["03", "Industries", "/industries"],
-  ["04", "Products", "/products"],
-  ["05", "Clients", "/clients"],
-  ["06", "Colour Chart", "/colour-chart"],
-  ["07", "Downloads", "/downloads"],
-  ["08", "About Colourplus", "/about"],
+  ["02", "About Colourplus", "/about"],
+  ["03", "Solutions", "/solutions"],
+  ["04", "Industries", "/industries"],
+  ["05", "Products", "/products"],
+  ["06", "Clients", "/clients"],
+  ["07", "Colour Chart", "/colour-chart"],
+  ["08", "Downloads", "/downloads"],
   ["09", "Contact", "/contact"],
 ];
 
