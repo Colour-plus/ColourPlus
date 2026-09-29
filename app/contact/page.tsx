@@ -152,43 +152,48 @@ export default function ContactPage() {
     }
 
     try {
-      const response = await fetch("/api/enquiries", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+  const response = await fetch("/api/enquiries", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
 
-      const result = await response.json().catch(() => null);
+  const result = await response.json().catch(() => null);
 
-      if (!response.ok || !result?.success) {
-  throw new Error(
-    result?.message || "Unable to submit your project brief."
+  if (!response.ok || !result?.success) {
+    throw new Error(
+      result?.message || "Unable to submit your project brief."
+    );
+  }
+
+  console.log("ENQUIRY CREATED:", result.enquiryId);
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "enquiry_submitted",
+  });
+
+  console.log(
+    "GTM enquiry_submitted event pushed",
+    window.dataLayer
   );
+
+  setSubmitted(true);
+  form.reset();
+} catch (error) {
+  console.error("CONTACT_FORM_ERROR:", error);
+
+  setSubmitError(
+    error instanceof Error
+      ? error.message
+      : "Unable to submit your project brief. Please try again."
+  );
+} finally {
+  setIsSubmitting(false);
 }
-
-console.log("ENQUIRY CREATED:", result.enquiryId);
-
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  event: "enquiry_submitted",
-});
-
-setSubmitted(true);
-form.reset();
-    } catch (error) {
-      console.error("CONTACT_FORM_ERROR:", error);
-
-      setSubmitError(
-        error instanceof Error
-          ? error.message
-          : "Unable to submit your project brief. Please try again."
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
   };
 
   return (
