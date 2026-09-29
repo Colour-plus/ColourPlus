@@ -164,15 +164,20 @@ export default function ContactPage() {
       const result = await response.json().catch(() => null);
 
       if (!response.ok || !result?.success) {
-        throw new Error(
-          result?.message || "Unable to submit your project brief."
-        );
-      }
+  throw new Error(
+    result?.message || "Unable to submit your project brief."
+  );
+}
 
-      console.log("ENQUIRY CREATED:", result.enquiryId);
+console.log("ENQUIRY CREATED:", result.enquiryId);
 
-      setSubmitted(true);
-      form.reset();
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: "enquiry_submitted",
+});
+
+setSubmitted(true);
+form.reset();
     } catch (error) {
       console.error("CONTACT_FORM_ERROR:", error);
 
