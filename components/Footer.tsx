@@ -157,10 +157,10 @@ export default function Footer() {
 
             {/* MOBILE */}
             <a
-              href="tel:+918050035873"
+              href="tel:+919035026984"
               className="cp-footer-contact-link"
             >
-              Mobile: +91 8050035873
+              Mobile: +91 9035026984
             </a>
 
             {/* EMAIL */}
