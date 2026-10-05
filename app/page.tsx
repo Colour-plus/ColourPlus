@@ -68,6 +68,42 @@ export default function Home() {
   return (
     <main className="colourplus-homepage">
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://colourplus.in/#website",
+                name: "Colourplus Polyurethanes Pvt. Ltd.",
+                alternateName: "Colourplus",
+                url: "https://colourplus.in/",
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://colourplus.in/#organization",
+                name: "Colourplus Polyurethanes Pvt. Ltd.",
+                legalName: "Colourplus Polyurethanes Pvt. Ltd.",
+                alternateName: "Colourplus",
+                url: "https://colourplus.in/",
+                logo: "https://colourplus.in/images/colourplus-logo.png",
+                description:
+                  "Colourplus Polyurethanes Pvt. Ltd. is an Indian manufacturer of engineered epoxy, polyurethane and specialist industrial flooring systems.",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Hubballi",
+                  addressRegion: "Karnataka",
+                  postalCode: "580025",
+                  addressCountry: "IN",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* =====================================================
           PAGE-LOCAL CSS
           Homepage only.
