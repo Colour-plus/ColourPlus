@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://colourplus.in"),
 
   title: {
-    default: "Colourplus Polyurethanes Pvt. Ltd. | Engineered Surfaces",
+    default: "Colourplus Polyurethanes Private Limited",
     template: "%s | Colourplus Polyurethanes Pvt. Ltd.",
   },
 
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://colourplus.in/",
     siteName: "Colourplus Polyurethanes Pvt. Ltd.",
-    title: "Colourplus Polyurethanes Pvt. Ltd. | Engineered Surfaces",
+    title: "Colourplus Polyurethanes Private Limited",
     description:
       "Engineered epoxy, polyurethane and specialist industrial flooring systems by Colourplus Polyurethanes Pvt. Ltd.",
     images: [
