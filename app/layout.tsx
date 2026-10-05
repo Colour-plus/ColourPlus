@@ -5,9 +5,41 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Colourplus — Engineered Surfaces",
+  metadataBase: new URL("https://colourplus.in"),
+
+  title: {
+    default: "Colourplus Polyurethanes Pvt. Ltd. | Engineered Surfaces",
+    template: "%s | Colourplus Polyurethanes Pvt. Ltd.",
+  },
+
   description:
-    "Industrial flooring, waterproofing, protective and advanced surface solutions.",
+    "Colourplus Polyurethanes Pvt. Ltd. is an Indian manufacturer of engineered epoxy, polyurethane and specialist industrial flooring systems.",
+
+  alternates: {
+    canonical: "https://colourplus.in/",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "https://colourplus.in/",
+    siteName: "Colourplus Polyurethanes Pvt. Ltd.",
+    title: "Colourplus Polyurethanes Pvt. Ltd. | Engineered Surfaces",
+    description:
+      "Engineered epoxy, polyurethane and specialist industrial flooring systems by Colourplus Polyurethanes Pvt. Ltd.",
+    images: [
+      {
+        url: "/images/colourplus-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Colourplus Polyurethanes Pvt. Ltd.",
+      },
+    ],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
