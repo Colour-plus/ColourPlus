@@ -39,6 +39,7 @@ export default function PrivacyPolicyPage() {
             <a href="#children">Children&apos;s Privacy</a>
             <a href="#changes">Changes to this Policy</a>
             <a href="#contact">Contact Us</a>
+            <Link href="/data-deletion">Data Deletion</Link>
           </aside>
 
           <article className={styles.privacyDocument}>

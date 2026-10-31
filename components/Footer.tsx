@@ -131,6 +131,14 @@ export default function Footer() {
               Privacy Policy
             </Link>
 
+            <Link href="/terms-of-service">
+              Terms of Service
+            </Link>
+
+            <Link href="/data-deletion">
+              User Data Deletion
+            </Link>
+
           </div>
 
 
